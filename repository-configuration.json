@@ -1,0 +1,98 @@
+{
+    "gammaAccess": {
+        "url": "",
+        "token": ""
+    },
+    "repositories": [
+        {
+           "dataDir": "./EMBOLD_DATA",
+            "repository": {
+                "uid": "10d5373a1e176ef39fc28ca2bc44e55b",
+                "projectName": "php",
+                "languages": [
+                    "PHP"
+                ],
+                "sources": {
+                     "baseDir": "$GITHUB_WORKSPACE",
+                    "exclusions": [
+                        "vendor",
+                        "wp-content/plugins",
+                        "protected/extensions",
+                        "test"
+                    ]
+                }
+            },
+            "settings": {
+                "additionalOptions": [],
+                "includePaths": []
+            },
+            "modules": {
+                "codeissues": [
+                    {
+                        "name": "phpcs",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    },
+                    {
+                        "name": "phpmd",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "RuleSets",
+                                    "type": "multiselect",
+                                    "value": [
+                                        "cleancode",
+                                        "codesize",
+                                        "controversial",
+                                        "design",
+                                        "naming",
+                                        "unusedcode"
+                                    ],
+                                    "choices": [
+                                        "cleancode",
+                                        "codesize",
+                                        "controversial",
+                                        "design",
+                                        "naming",
+                                        "unusedcode"
+                                    ],
+                                    "required": true
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "gamma_generic",
+                        "enabled": false,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "relevance": [
+                    {
+                        "name": "relevance",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
